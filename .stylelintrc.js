@@ -13,6 +13,16 @@ module.exports = {
           // CSS Modules composition
           // https://github.com/css-modules/css-modules#composition
           "composes",
+          "breakpoint_desktop",
+        ],
+      },
+    ],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        ignorePseudoClasses: [
+          // allow CSS modules :export psudo class
+          "export",
         ],
       },
     ],

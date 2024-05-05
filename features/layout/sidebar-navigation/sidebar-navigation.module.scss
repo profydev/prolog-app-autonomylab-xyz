@@ -4,6 +4,10 @@
 @use "@styles/z-index";
 @use "@styles/misc";
 
+:export {
+  breakpoint_desktop: breakpoint.$desktop;
+}
+
 .container,
 .fixedContainer {
   width: 100%;
