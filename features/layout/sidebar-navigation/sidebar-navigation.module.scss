@@ -138,4 +138,8 @@
   @media (min-width: breakpoint.$desktop) {
     display: flex;
   }
+
+  &.isSidebarCollapsed {
+    transform: rotate(180deg);
+  }
 }
