@@ -21,7 +21,8 @@ module.exports = {
       true,
       {
         ignorePseudoClasses: [
-            "export",
+          // allow CSS modules :export psudo class
+          "export",
         ],
       },
     ],
