@@ -32,7 +32,7 @@ export function SidebarNavigation() {
       );
       setIsDesktopView(mediaWatcher.matches);
     };
-
+    onResize();
     window.addEventListener("resize", onResize);
 
     return () => {
