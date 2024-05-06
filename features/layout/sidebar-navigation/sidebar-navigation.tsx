@@ -16,6 +16,9 @@ const menuItems = [
   { text: "Settings", iconSrc: "/icons/settings.svg", href: Routes.settings },
 ];
 
+const mailtoEmail = "support@prolog-app.com";
+const mailtoSubject = "Support Request:";
+
 export function SidebarNavigation() {
   const router = useRouter();
   const { isSidebarCollapsed, toggleSidebar } = useContext(NavigationContext);
@@ -36,6 +39,13 @@ export function SidebarNavigation() {
       window.removeEventListener("resize", onResize);
     };
   }, []);
+
+  function handleSupportClick() {
+    window.open(
+      "mailto:" + mailtoEmail + "?subject=" + mailtoSubject,
+      "_blank",
+    );
+  }
 
   return (
     <div
@@ -100,7 +110,7 @@ export function SidebarNavigation() {
               text="Support"
               iconSrc="/icons/support.svg"
               isCollapsed={isSidebarCollapsed}
-              onClick={() => alert("Support")}
+              onClick={() => handleSupportClick()}
             />
             <MenuItemButton
               text="Collapse"
